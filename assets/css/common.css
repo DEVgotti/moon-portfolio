@@ -1,0 +1,65 @@
+:root {
+  --main-color: #210535;
+  --secondary-color: #430d4b;
+  --terciary-color: #7b337d;
+  --idk-color: #c874b2;
+  --onemore-color: #f5d5e0;
+
+  font-size: 16px;
+}
+
+html {
+  height: 100%;
+  /*background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);*/
+  background: radial-gradient(ellipse at bottom, #2c0c31 0%, #381055 100%);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.menu {
+  position: absolute;
+  background-color: #2e0f36;
+  width: 25vw;
+  bottom: 20px;
+  left: 50%;
+  padding: 1rem;
+  border-radius: 30px 50px;
+  margin-left: -12.5vw;
+  color: #cbb8ef;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.menu:before {
+  content: "";
+  background: linear-gradient(18.48deg, rgba(255, 255, 255, 0.25) 2.76%, rgba(255, 255, 255, 0) 17.23%),
+    linear-gradient(200.6deg, rgba(255, 255, 255, 0.25) 4.13%, rgba(255, 255, 255, 0) 20.54%);
+  border-radius: inherit;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  inset: 0;
+  padding: 1px;
+  position: absolute;
+}
+
+.menu nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu nav ul li {
+  font-family: lato;
+  width: 100vw;
+  text-align: center;
+  text-transform: uppercase;
+}
