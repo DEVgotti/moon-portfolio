@@ -8,6 +8,10 @@
   font-size: 16px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   /*background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);*/
@@ -19,11 +23,27 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  color: #fff;
+  font-family: Archivo, Lato, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  overflow: auto;
+  height: 100dvh;
+}
+
+.container {
+  margin: 35px auto;
+  max-width: 1240px;
+  padding: 70px 10px;
+  background-color: #210535;
+  z-index: 10;
+  position: relative;
+  height: 70dvh;
+  clear: both;
 }
 
 .menu {
-  position: absolute;
-  background-color: #2e0f36;
+  position: fixed;
+  background-color: rgba(46, 15, 54, 0);
   width: 25vw;
   bottom: 20px;
   left: 50%;
@@ -33,11 +53,12 @@ body {
   color: #cbb8ef;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.15);
-  z-index: 1;
+  z-index: 20;
+  backdrop-filter: blur(5px);
 }
 
 .menu:before {
-  content: "";
+  content: '';
   background: linear-gradient(18.48deg, rgba(255, 255, 255, 0.25) 2.76%, rgba(255, 255, 255, 0) 17.23%),
     linear-gradient(200.6deg, rgba(255, 255, 255, 0.25) 4.13%, rgba(255, 255, 255, 0) 20.54%);
   border-radius: inherit;
@@ -62,4 +83,141 @@ body {
   width: 100vw;
   text-align: center;
   text-transform: uppercase;
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.cards > * {
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  backdrop-filter: blur(6.4px);
+}
+
+.cards .card-welcome {
+  background: #131311;
+  border-radius: 30px 50px;
+  padding: 51px 58px;
+  grid-column: 1/9;
+}
+.cards .card-welcome::before {
+  background: linear-gradient(18.48deg, rgba(255, 255, 255, 0.25) 2.76%, rgba(255, 255, 255, 0) 17.23%),
+    linear-gradient(200.6deg, rgba(255, 255, 255, 0.25) 4.13%, rgba(255, 255, 255, 0) 20.54%);
+  border-radius: inherit;
+  content: '';
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.cards .card-welcome header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards .card-welcome header .card-welcome-me .card-welcome-me-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.cards .card-welcome .card-welcome-me-title span {
+  color: #89aed5;
+}
+.cards .card-welcome header .card-welcome-me .card-welcome-me-role {
+  font-size: 0.9rem;
+  opacity: 0.32;
+}
+
+.cards .card-welcome header .card-welcome-socials {
+  display: flex;
+  justify-content: center;
+}
+
+.cards .card-welcome header .card-welcome-socials .card-welcome-social-item {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) background-color, 0.45s cubic-bezier(0.6, 0.6, 0, 1) transform;
+  width: 40px;
+}
+.cards .card-welcome header .card-welcome-socials .card-welcome-social-item::before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: inherit;
+  content: '';
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+}
+.cards .card-welcome header .card-welcome-socials .card-welcome-social-item:hover {
+  background-color: #ffffff0d;
+  transform: scale(0.95);
+}
+
+.cards .card-welcome header .card-welcome-socials .card-welcome-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.cards .card-welcome .card-welcome-title {
+  font-size: 3rem;
+  padding: 30px 0;
+  font-weight: bold;
+  max-width: 600px;
+}
+
+.cards .card-welcome .card-welcome-text {
+  font-size: 1.3rem;
+  max-width: 500px;
+  opacity: 0.6;
+  font-family: Roboto;
+}
+
+.cards .card-hello {
+  border-radius: 30px 50px;
+  grid-column: 9/13;
+}
+
+.cards .card-hello::before {
+  background: linear-gradient(18.48deg, rgba(255, 255, 255, 0.25) 2.76%, rgba(255, 255, 255, 0) 17.23%),
+    linear-gradient(200.6deg, rgba(255, 255, 255, 0.25) 4.13%, rgba(255, 255, 255, 0) 20.54%);
+  border-radius: inherit;
+  content: '';
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.cards .card-projects {
+  display: grid;
+  grid-column: span 12;
+  border-radius: 30px 50px;
+  background-color: #fff;
+  height: 50dvh;
 }
