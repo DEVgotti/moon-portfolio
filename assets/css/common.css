@@ -31,13 +31,12 @@ body {
 }
 
 .container {
-  margin: 35px auto;
+  margin: 50px auto;
   max-width: 1240px;
   padding: 70px 10px;
   background-color: #210535;
   z-index: 10;
   position: relative;
-  height: 70dvh;
   clear: both;
 }
 
@@ -88,15 +87,31 @@ body {
 .cards {
   display: grid;
   gap: 20px;
-  grid-auto-rows: 1fr;
   grid-template-columns: repeat(12, 1fr);
 }
 
 .cards > * {
-  position: relative;
+  isolation: isolate;
   overflow: hidden;
+  position: relative;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   backdrop-filter: blur(6.4px);
+  border-radius: 30px;
+}
+.cards > *::before {
+  background: linear-gradient(112.59deg, rgba(255, 255, 255, 0.05) 83.32%, rgba(255, 255, 255, 0.1) 94.31%),
+    linear-gradient(109.73deg, rgba(255, 255, 255, 0.1) 7.85%, rgba(255, 255, 255, 0.05) 19.46%);
+  border-radius: inherit;
+  content: '';
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
 }
 
 .cards .card-welcome {
@@ -124,6 +139,7 @@ body {
 .cards .card-welcome header {
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 }
 
 .cards .card-welcome header .card-welcome-me .card-welcome-me-title {
@@ -216,8 +232,82 @@ body {
 
 .cards .card-projects {
   display: grid;
+  gap: 20px;
   grid-column: span 12;
-  border-radius: 30px 50px;
-  background-color: #fff;
-  height: 50dvh;
+  grid-template-columns: repeat(2, 1fr);
+  isolation: unset;
+  overflow: unset;
+}
+
+.cards .card-projects .card-project {
+  position: relative;
+  background-color: #000;
+  border-radius: 30px;
+  height: 554px;
+  min-height: 554px;
+}
+.cards .card-projects .card-project::before {
+  background: linear-gradient(112.59deg, rgba(255, 255, 255, 0.05) 83.32%, rgba(255, 255, 255, 0.1) 94.31%),
+    linear-gradient(109.73deg, rgba(255, 255, 255, 0.1) 7.85%, rgba(255, 255, 255, 0.05) 19.46%);
+  border-radius: inherit;
+  content: '';
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+
+  z-index: 20;
+}
+.cards .card-projects .card-project header {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  z-index: 10;
+}
+.cards .card-projects .card-project header .card-project-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.cards .card-projects .card-project header .card-project-title-name {
+  font-size: 1.7rem;
+}
+.cards .card-projects .card-project header .card-project-title-wip {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #ffffff1a;
+  border-radius: 20px;
+  font-size: 10px;
+  margin-left: 14px;
+  padding: 5px 10px 4px;
+  text-transform: uppercase;
+}
+.cards .card-projects .card-project .card-project-background {
+  border-radius: inherit;
+  height: 100%;
+  inset: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+}
+.blur {
+  filter: blur(20px);
+  height: calc(100% + 96px);
+  inset: -48px;
+  opacity: 0.5;
+  width: calc(100% + 96px);
+  z-index: -11;
+}
+.card-skills {
+  grid-column: 1/10;
+}
+.card-contact {
+  grid-column: 10/13;
 }
