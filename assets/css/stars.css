@@ -111,11 +111,12 @@
     560px 991px #fff, 749px 1588px #fff, 1451px 678px #fff, 878px 1049px #fff, 1444px 1909px #fff, 669px 1422px #fff, 1762px 268px #fff,
     1171px 1027px #fff;
   animation: animStar 50s linear infinite;
+  z-index: 0;
 }
 #stars:after {
-  content: " ";
+  content: ' ';
   position: absolute;
-  top: 2000px;
+  bottom: 2000px;
   width: 1px;
   height: 1px;
   background: transparent;
@@ -220,6 +221,7 @@
     26px 1567px #fff, 824px 499px #fff, 1291px 1516px #fff, 793px 1349px #fff, 1988px 21px #fff, 1692px 308px #fff, 150px 1918px #fff,
     560px 991px #fff, 749px 1588px #fff, 1451px 678px #fff, 878px 1049px #fff, 1444px 1909px #fff, 669px 1422px #fff, 1762px 268px #fff,
     1171px 1027px #fff;
+  z-index: 0;
 }
 
 #stars2 {
@@ -256,11 +258,12 @@
     1272px 1872px #fff, 496px 343px #fff, 79px 1622px #fff, 1837px 677px #fff, 1671px 978px #fff, 650px 1697px #fff, 1574px 932px #fff,
     1264px 1237px #fff, 950px 1087px #fff, 1857px 178px #fff, 108px 565px #fff;
   animation: animStar 100s linear infinite;
+  z-index: 0;
 }
 #stars2:after {
-  content: " ";
+  content: ' ';
   position: absolute;
-  top: 2000px;
+  bottom: 2000px;
   width: 2px;
   height: 2px;
   background: transparent;
@@ -293,6 +296,7 @@
     1305px 463px #fff, 1635px 950px #fff, 671px 1365px #fff, 359px 1442px #fff, 299px 564px #fff, 574px 776px #fff, 1085px 529px #fff,
     1272px 1872px #fff, 496px 343px #fff, 79px 1622px #fff, 1837px 677px #fff, 1671px 978px #fff, 650px 1697px #fff, 1574px 932px #fff,
     1264px 1237px #fff, 950px 1087px #fff, 1857px 178px #fff, 108px 565px #fff;
+  z-index: 0;
 }
 
 #stars3 {
@@ -315,11 +319,12 @@
     438px 168px #fff, 130px 1208px #fff, 1081px 121px #fff, 833px 772px #fff, 759px 472px #fff, 1875px 741px #fff, 498px 1646px #fff,
     1027px 775px #fff, 634px 1341px #fff, 1615px 1637px #fff;
   animation: animStar 150s linear infinite;
+  z-index: 0;
 }
 #stars3:after {
-  content: " ";
+  content: ' ';
   position: absolute;
-  top: 2000px;
+  bottom: 2000px;
   width: 3px;
   height: 3px;
   background: transparent;
@@ -338,6 +343,7 @@
     1266px 1277px #fff, 1793px 326px #fff, 1865px 876px #fff, 171px 1481px #fff, 782px 1754px #fff, 1194px 21px #fff, 108px 906px #fff,
     438px 168px #fff, 130px 1208px #fff, 1081px 121px #fff, 833px 772px #fff, 759px 472px #fff, 1875px 741px #fff, 498px 1646px #fff,
     1027px 775px #fff, 634px 1341px #fff, 1615px 1637px #fff;
+  z-index: 0;
 }
 
 @keyframes animStar {
