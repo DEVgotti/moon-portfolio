@@ -22,9 +22,10 @@
       <nav>
         <ul>
           <li><a href="./index.html">Índice</a></li>
-          <li><a href="./index.html">Proyectos</a></li>
+          <li><a href="./projects.html">Proyectos</a></li>
+          <li><a href="./index.html#skills">Habilidades</a></li>
           <li><a href="./index.html">Sobre mí</a></li>
-          <li><a href="./index.html">Contacto</a></li>
+          <li><a href="./index.html#contact">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -68,7 +69,7 @@
           </header>
           <h3 class="card-welcome-title">Si no hay destino disfruta el viaje</h3>
           <div class="card-welcome-text">
-            Estoy a 380.400km y aun así las personas vienen solo para pisarme. Mi único hobby es rotar alrededor de la tierra.
+            Estoy a 380.400km y aun así las personas vienen solo para pisarme. Mi hobby es rotar alrededor de la tierra.
           </div>
         </div>
         <div class="card-profile">
@@ -85,7 +86,72 @@
             <div class="moon-crater"></div>
           </div>
         </div>
-        <div class="card-skills"></div>
+        <div class="card-skills" id="skills">
+          <!-- Gravedad -->
+          <div class="card-skills-skill">
+            <div class="card-skill-bar">
+              <div class="card-skill-gravity-progress">Gravedad</div>
+            </div>
+          </div>
+          <div class="card-skills-skill">
+            <div class="card-skill-bar">
+              <div class="card-skill-rotation-progress">Rotación</div>
+            </div>
+          </div>
+          <div class="card-skills-skill">
+            <div class="card-skill-bar">
+              <div class="card-skill-temperature-progress">Temperatura</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-contact" id="contact">
+          <div class="card-contact-form">
+            <form method="post" action="./fake-contact.html">
+              <div class="card-contact-form-option">
+                <label for="name">Nombre</label>
+                <input type="text" placeholder="¿Cual es tu nombre?" name="name" id="name" required />
+              </div>
+
+              <div class="card-contact-form-option">
+                <label for="surname">Apellidos</label>
+                <input type="text" placeholder="¿Cual es tu apellido?" name="surname" required id="surname" />
+              </div>
+
+              <div class="card-contact-form-option">
+                <label for="phone">Teléfono</label>
+                <input type="tel" placeholder="¿Cual es tu número?" name="phone" id="phone" required />
+              </div>
+
+              <div class="card-contact-form-option">
+                <label>¿Como me conociste?</label>
+                <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> Universidad
+                <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> Keepcoding kick-off
+                <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> Colegio
+                <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> Github
+              </div>
+
+              <div class="card-contact-form-option">
+                <label for="tag">Tag de Github</label>
+                <input type="text" placeholder="¿Cual es tu nombre?" name="tag" id="tag" />
+              </div>
+
+              <div class="card-contact-form-option">
+                <label for="message">Mensaje</label>
+                <textarea rows="10" cols="20" maxlength="180" name="message" id="message" required></textarea>
+              </div>
+
+              <div class="card-contact-form-option">
+                <label for="newsletter">Newsletter</label>
+                <input type="checkbox" name="newsletter" id="newsletter" />
+              </div>
+
+              <div class="card-contact-form-option">
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Reiniciar" />
+              </div>
+            </form>
+          </div>
+        </div>
       </secion>
     </div>
   </body>

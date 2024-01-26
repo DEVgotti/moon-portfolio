@@ -14,7 +14,6 @@
 
 html {
   height: 100%;
-  /*background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);*/
   background: radial-gradient(ellipse at bottom, #2c0c31 0%, #381055 100%);
   overflow: hidden;
 }
@@ -26,6 +25,7 @@ body {
   color: #fff;
   font-family: Archivo, Lato, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
     'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
   overflow: auto;
   height: 100dvh;
 }
@@ -59,7 +59,7 @@ header.banner {
   .menu {
     position: fixed;
     background-color: rgba(46, 15, 54, 0);
-    width: 25vw;
+    width: 35vw;
     bottom: 20px;
     left: 50%;
     padding: 1rem;
@@ -115,7 +115,7 @@ header.banner {
 
 .cards {
   display: grid;
-  gap: 20px;
+  gap: 30px;
   grid-template-columns: repeat(12, 1fr);
 }
 
@@ -358,6 +358,89 @@ header.banner {
   width: 15px;
 }
 
+.cards .card-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  padding: 25px;
+  grid-column: 1/13;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+.cards .card-skills::after {
+  content: 'Habilidades';
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  z-index: 3;
+  font-size: 1.5em;
+  background-color: #210535;
+  padding: 5px;
+}
+.cards .card-skills .card-skills-skill {
+  background-color: #fff;
+  position: relative;
+  height: 1.5em;
+  border-radius: 2px;
+}
+
+@keyframes progressBar_gravity {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 30%;
+  }
+}
+@keyframes progressBar_rotation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes progressBar_temperature {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+.cards .card-skills .card-skills-skill .card-skill-bar .card-skill-gravity-progress,
+.cards .card-skills .card-skills-skill .card-skill-bar .card-skill-rotation-progress,
+.cards .card-skills .card-skills-skill .card-skill-bar .card-skill-temperature-progress {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  background-color: #7e4997;
+  height: 100%;
+  color: #fff;
+  font-size: 0.8em;
+  text-align: right;
+  padding-right: 5px;
+  line-height: 0.8em;
+  text-transform: uppercase;
+}
+.cards .card-skills .card-skills-skill .card-skill-bar .card-skill-gravity-progress {
+  width: 30%;
+  animation-name: progressBar_gravity;
+  animation-duration: 1s;
+}
+.cards .card-skills .card-skills-skill .card-skill-bar .card-skill-rotation-progress {
+  width: 70%;
+  animation-name: progressBar_rotation;
+  animation-duration: 1s;
+}
+.cards .card-skills .card-skills-skill .card-skill-bar .card-skill-temperature-progress {
+  width: 90%;
+  animation-name: progressBar_temperature;
+  animation-duration: 1s;
+}
 .cards .card-projects {
   display: grid;
   gap: 20px;
@@ -437,5 +520,19 @@ header.banner {
   grid-column: 1/10;
 }
 .card-contact {
-  grid-column: 10/13;
+  position: relative;
+  grid-column: 3/10;
+  z-index: 2;
+  overflow: visible;
+  padding: 25px;
+}
+.card-contact::after {
+  content: 'Contacto';
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  z-index: 3;
+  font-size: 1.5em;
+  background-color: #210535;
+  padding: 5px;
 }
