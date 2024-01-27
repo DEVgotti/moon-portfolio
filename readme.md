@@ -1,7 +1,7 @@
 # Práctica HTML / CSS
 Buscando referencias por internet, encontré un fondo de estrellas hechas en CSS el cual me inspiró a hacer una especie de landing/portfolio sobre la luna y decidí probar a hacer una luna con CSS.
 
-He mantenido mi nombre en algunos lugares como el <title> como método de créditos de autor y las redes sociales también indican a las mías.
+He mantenido mi nombre en algunos lugares como el <title> como método de referencia al autor y las redes sociales también indican a las mías.
 
 El fondo utilizado esta separado en el archivo [stars.css](https://github.com/DEVgotti/moon-portfolio/blob/main/assets/css/stars.css) para no ser evaluado ya que no esta escrito por mi.
 
