@@ -105,8 +105,8 @@
           </div>
         </div>
         <div class="card-contact" id="contact">
-          <div class="card-contact-form">
-            <form method="post" action="./fake-contact.html">
+          <form method="post" action="./fake-contact.html">
+            <div class="card-contact-form">
               <div class="card-contact-form-option">
                 <label for="name">Nombre</label>
                 <input type="text" placeholder="¿Cual es tu nombre?" name="name" id="name" required />
@@ -124,10 +124,12 @@
 
               <div class="card-contact-form-option">
                 <label>¿Como me conociste?</label>
-                <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> Universidad
-                <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> Keepcoding kick-off
-                <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> Colegio
-                <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> Github
+                <div class="wider">
+                  <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> <span>Universidad</span>
+                  <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> <span>Keepcoding kick-off</span>
+                  <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> <span>Colegio</span>
+                  <input type="radio" placeholder="¿Cual es tu nombre?" name="howto" required /> <span>Github</span>
+                </div>
               </div>
 
               <div class="card-contact-form-option">
@@ -135,9 +137,9 @@
                 <input type="text" placeholder="¿Cual es tu nombre?" name="tag" id="tag" />
               </div>
 
-              <div class="card-contact-form-option">
+              <div class="card-contact-form-option wider">
                 <label for="message">Mensaje</label>
-                <textarea rows="10" cols="20" maxlength="180" name="message" id="message" required></textarea>
+                <textarea rows="10" cols="60" maxlength="180" name="message" id="message" required></textarea>
               </div>
 
               <div class="card-contact-form-option">
@@ -145,12 +147,12 @@
                 <input type="checkbox" name="newsletter" id="newsletter" />
               </div>
 
-              <div class="card-contact-form-option">
+              <div class="card-contact-form-option center">
                 <input type="submit" value="Enviar" />
                 <input type="reset" value="Reiniciar" />
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </secion>
     </div>
