@@ -39,19 +39,19 @@ section.projects {
   align-items: center;
 }
 .viaje-luna {
-  background: url('../img/projects/p1.jpg');
+  background: url('../assets/img/projects/p1.jpg');
   background-size: cover;
 }
 .sonda-luna2 {
-  background: url('../img/projects/p2.jpg');
+  background: url('../assets/img/projects/p2.jpg');
   background-size: cover;
 }
 .sonda-slim {
-  background: url('../img/projects/p3.jpg');
+  background: url('../assets/img/projects/p3.jpg');
   background-size: cover;
 }
 .sonda-change4 {
-  background: url('../img/projects/p4.jpg');
+  background: url('../assets/img/projects/p4.jpg');
   background-size: cover;
 }
 
@@ -70,21 +70,7 @@ section.projects {
   .container .projects > * {
     width: 20%;
   }
-  .viaje-luna {
-    background: url('../img/projects/p1.jpg');
-    background-size: cover;
-  }
   .sonda-luna2 {
-    background: url('../img/projects/p2.jpg');
-    background-size: cover;
     background-position-x: -60px;
-  }
-  .sonda-slim {
-    background: url('../img/projects/p3.jpg');
-    background-size: cover;
-  }
-  .sonda-change4 {
-    background: url('../img/projects/p4.jpg');
-    background-size: cover;
   }
 }

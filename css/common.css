@@ -39,7 +39,7 @@ header.banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('../img/banner3.jpg') center;
+  background: url('../assets/img/banner3.jpg') center;
   margin: 0 auto;
   padding: 0;
   max-width: 1240px;
@@ -626,7 +626,7 @@ footer {
   }
 
   header.banner {
-    background: url('../img/banner.jpg') center;
+    background: url('../assets/img/banner.jpg') center;
     object-fit: contain;
   }
   .cards {
