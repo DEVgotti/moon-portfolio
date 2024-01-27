@@ -7,6 +7,7 @@ El fondo utilizado esta separado en el archivo [stars.css](https://github.com/DE
 
 ## Recursos del proyecto
 [Visitar el proyecto en Github Pages](https://devgotti.github.io/moon-portfolio/)
+
 Todos los assets (imágenes y video) esta en la carpeta [assets](https://github.com/DEVgotti/moon-portfolio/tree/main/assets)
 En la carpeta [css](https://github.com/DEVgotti/moon-portfolio/tree/main/css) se encuentran 4 archivos:
 * [Common](https://github.com/DEVgotti/moon-portfolio/blob/main/css/common.css): El archivo principal de css tanto para el índice como para diseños generales hacia html, body y header.
